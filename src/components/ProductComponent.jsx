@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import { Box, Button, Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
 import flowerImage from '../assets/images/flower.jpg'; // Import the image
 import AcUnitIcon from '@mui/icons-material/AcUnit';
@@ -5,8 +6,8 @@ import AcUnitIcon from '@mui/icons-material/AcUnit';
 const ProductComponent = () => {
   return (
     <Box>
-      <Card sx={{borderRadius:3, position:'relative'}}>
-        <CardMedia component="img" image={flowerImage} sx={{maxHeight:'225px'}} />
+      <Card sx={{borderRadius: 5, position:'relative'}}>
+        <CardMedia component="img" image={flowerImage} sx={{height:'225px'}} />
         {/* overlay */}
         <Box sx={{
           content: '""',
@@ -15,8 +16,20 @@ const ProductComponent = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          background: 'linear-gradient(to bottom, #FFFFFF00, #1A8B8B)',
+          backgroundColor: 'rgba(65, 64, 64, 0.5)',
           }}
+        />
+
+        <Box sx={{
+          content: '""',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          height: '225px',
+          background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(26, 139, 139, 0.5))', 
+        }}
         />
 
         <Box sx={{
@@ -43,7 +56,7 @@ const ProductComponent = () => {
           }}
         />
 
-        <CardContent sx={{position:'relative', backgroundColor:'#9A9A9A'}}>
+        <CardContent sx={{position:'relative' , pb:'1rem !important'}}>
           <Stack spacing={1}>
             <Typography 
               color="#F5F5F5"
@@ -79,9 +92,9 @@ const ProductComponent = () => {
                 333 TIPS
               </Typography>
             </Stack>
-            <Button variant="contained" sx={{backgroundColor:'#D9D9D9', borderRadius: 2, textTransform: 'none'}}>
+            <Button variant="contained" sx={{backgroundColor:'#D9D9D9', borderRadius: 3, textTransform: 'none', boxShadow: 0, py: 1.5}}>
               <Typography 
-                color="#F5F5F5"
+                color="#000"
                 fontFamily="Inter"
                 fontSize="16px"
                 fontStyle="normal"

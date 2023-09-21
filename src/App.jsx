@@ -8,7 +8,7 @@ function App() {
 			<Typography variant="h2">Products</Typography>
 			<Grid container spacing={2}>
 				{[1,2,3,4].map((index)=>(
-					<Grid item key={index} xs={12} md={6} lg={4} xl={3}>
+					<Grid item key={index} xs={12} sm={6} md={4} lg={3}>
 						<ProductComponent />
 					</Grid>
 				))}
